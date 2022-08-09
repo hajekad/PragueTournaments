@@ -1,0 +1,22 @@
+#content-wrapper {
+    overflow-x: NONE;
+}
+
+#mainBody {
+    margin-top: 3rem;
+    background-image: url("../../assets/banners/Uvodkapozadi.png");
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    background-size: cover;
+}
+
+#smallBody {
+    width: 65%;
+    height: 100vh;
+    background: rgba(99, 102, 106, 0.5);
+    margin-top: 0;
+    padding-bottom: 1rem;
+}
