@@ -7,29 +7,7 @@
 }
 
 #banner {
-    width: inherit;
-}
-
-#sponsorBlock {
-    background-color: white;
-    border-radius: 2rem;
-    padding: 2rem;
-    width: 50vw;
-    align-items: center;
-    align-content: center;
-}
-
-#sponsorCol{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sponsorPictureBase {
-    display:block;
-    height: 4rem;
-    width:auto;
-    margin-top: 8px;
+    width: 100vw;
 }
 
 #mainBody {

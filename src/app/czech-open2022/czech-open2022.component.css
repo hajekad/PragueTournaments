@@ -15,8 +15,23 @@
 
 #smallBody {
     width: 65%;
-    height: 100vh;
     background: rgba(99, 102, 106, 0.5);
     margin-top: 0;
     padding-bottom: 1rem;
+}
+
+#topPic {
+    width: inherit;
+    
+    background-color: rgba(99, 102, 106, 0.6);
+}
+
+#banner {
+    width: inherit;
+}
+
+.propositions {
+    margin-bottom: 1rem;    
+    width: 100vw;
+    text-align: center;
 }

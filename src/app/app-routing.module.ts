@@ -4,6 +4,7 @@ import { CzechOpen2022Component } from './czech-open2022/czech-open2022.componen
 import { LandingComponent } from './landing/landing.component';
 import { MailMeComponent } from './mail-me/mail-me.component';
 import { YonexSeniorsCup2023Component } from './yonex-seniors-cup2023/yonex-seniors-cup2023.component';
+import { YonexYouth2023Component } from './yonex-youth2023/yonex-youth2023.component';
 import { Yonex2022Component } from './yonex2022/yonex2022.component';
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path:'czech-open2022', title:'czech-open2022', component:CzechOpen2022Component },
   { path:'yonex2022', title:'yonex2022', component:Yonex2022Component },
   { path:'yonex-seniors-cup2023', title:'yonex-seniors-cup2023', component:YonexSeniorsCup2023Component },
+  { path:'yonex-youth2023', title:'yonex-youth2023', component:YonexYouth2023Component },
 ];
 
 @NgModule({
