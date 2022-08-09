@@ -1,0 +1,9 @@
+.navbar {
+    height: 3rem;
+}
+
+.navbar-brand {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}

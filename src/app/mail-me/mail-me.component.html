@@ -1,0 +1,144 @@
+<section id="content-wrapper">    
+    <div id="mainBody">
+        <div id="smallBody" class="container">
+            <h1>Contact us!</h1>
+            <hr>
+            <div class="row">
+                <div>
+                    <form action="" method="post" class="">
+                        <input type="text" name="_honey" value="" style="display:none" />
+                        <input type="hidden" name="_subject" value="Thanks for reaching out." />
+                        <div data-component="form-group" data-content="true">
+                            <div class="form-group">
+                                <div data-content="true" data-component="text">
+                                    <label for="exampleInputEmail1" class="">Your name:</label>
+                                </div>
+                                <input type="text" class="form-control" id="name" placeholder="Your name" name="name" />
+                            </div>
+                        </div>
+                        <hr>
+                        <div data-component="form-group" data-content="true">
+                            <div class="form-group">
+                                <div data-content="true" data-component="text">
+                                    <label for="exampleInputEmail1" class="">Your e-mail:</label>
+                                </div>
+                                <input type="email" class="form-control" id="email" placeholder="Your email" name="email" />
+                            </div>
+                        </div>
+                        <hr>
+                        <div data-component="form-group" data-content="true">
+                            <div class="form-group">
+                                <div data-content="true" data-component="text">
+                                    <label for="exampleInputEmail1" class="">Your message:</label>
+                                </div>
+                                <textarea class="form-control" id="message" name="message" placeholder="Your message" rows="10" cols="50"></textarea>
+                            </div>
+                        </div>
+                        <div class="alert alert-danger" id="danger-alert" role="alert" style="display: none">
+                        </div>
+                        <div class="alert alert-success" id="success-alert" role="alert" style="display: none">
+                        </div>
+                        <div>
+                            <!--
+                            ===================================================================================
+
+                            NÁSLEDUJÍCÍ ČÁST KÓDU OBSAHUJE HANDLER PRO ODESÍLÁNÍ MAILŮ - DOPORUČUJEME NEUPRAVOVAT
+                            NEXT PART OF CODE CONTAINS HANDLER FOR MAIL SENDING - WE ADVISE NOT TO MODIFY
+                            
+                            @version 1.0
+                            @author WEDOS Internet
+                            
+                            ===================================================================================
+                            -->
+                            <!-- GOOGLE reCAPTCHA API -->
+                            <div id="gapi">
+                            </div>
+                            <!-- Element reCAPTCHA -->
+                            <div id="recaptcha" class="col-md-1">
+                            </div>
+                            <!-- handler -->
+                            <script>
+                                
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    if (parent.siteAdmin === undefined)
+                                    {
+                                        let script = document.createElement( 'script' )
+                                        script.type = 'text/javascript'
+                                        script.src = 'https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit'
+                                        document.getElementById('gapi').append( script )
+                                        document.getElementById('message').form.setAttribute('action', 'javascript:void(0);')
+                                        document.getElementById('message').form.setAttribute('onsubmit', 'sendMail()')
+                                    }
+                                })
+
+                                function onloadCallback()
+                                {
+                                    if (parent.siteAdmin === undefined)
+                                    {
+                                        grecaptcha.render('recaptcha', {
+                                            'sitekey' : '6Lf5AU8aAAAAAN7X8dfycU4xPHG8MfMobRCKhjjp'
+                                        });
+                                    }
+                                }
+
+                                function sendMail()
+                                {
+                                    const lang = 'en'
+
+                                    document.getElementById('mail-submit').disabled = true
+                                    var xhttp = new XMLHttpRequest()
+                                    xhttp.open("POST", "scripts/sendMail.php", true)
+                                    xhttp.setRequestHeader("Content-Type", "application/json")
+                                    xhttp.onreadystatechange = function()
+                                    {
+                                        if (this.readyState == 4)
+                                        {
+                                            if (this.status == 200)
+                                            {
+                                                let response = JSON.parse(this.responseText);
+                                                if (response.success == true)
+                                                {
+                                                    document.getElementById('success-alert').innerHTML = response.msg
+                                                    document.getElementById('success-alert').style.display = "block"
+                                                }
+                                                else
+                                                {
+                                                    document.getElementById('danger-alert').innerHTML = response.msg
+                                                    document.getElementById('danger-alert').style.display = "block"
+                                                    grecaptcha.reset()
+                                                }
+                                            }
+                                            else
+                                            {
+                                                document.getElementById('danger-alert').innerHTML = "server side error"
+                                                document.getElementById('danger-alert').style.display = "block"
+                                                grecaptcha.reset()
+                                            }
+                                        }
+                                        document.getElementById('mail-submit').disabled = false
+                                    }
+                                    var data = {name:document.getElementById('name').value, message: document.getElementById('message').value, email: document.getElementById('email').value, recaptcha: grecaptcha.getResponse(), phone: (document.getElementById('phone') == null ? '' : document.getElementById('phone').value), lang: lang}
+                                    xhttp.send(JSON.stringify(data))
+                                }
+                            
+                            </script>
+                            <!--
+                            ===================================================================================
+
+                            KONEC KÓDU OBSAHUJÍCÍ HANDLER PRO ODESÍLÁNÍ MAILŮ
+                            END OF CODE CONTAINING HANDLER FOR MAIL SENDING
+
+                            ===================================================================================
+                            -->
+                        </div>
+                        <hr>
+                        <div class="col-md-12">
+                            <button type="submit" id="mail-submit" class="btn btn-danger btn-block">Send message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
