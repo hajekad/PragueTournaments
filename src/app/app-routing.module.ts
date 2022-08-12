@@ -8,13 +8,13 @@ import { YonexYouth2023Component } from './yonex-youth2023/yonex-youth2023.compo
 import { Yonex2022Component } from './yonex2022/yonex2022.component';
 
 const routes: Routes = [
-  { path:'', redirectTo:'LandingComponent', pathMatch:'full' },
-  { path:'LandingComponent', title:'landing', component:LandingComponent },
-  { path:'mail-me', title:'mail-me', component:MailMeComponent },
-  { path:'czech-open2022', title:'czech-open2022', component:CzechOpen2022Component },
-  { path:'yonex2022', title:'yonex2022', component:Yonex2022Component },
-  { path:'yonex-seniors-cup2023', title:'yonex-seniors-cup2023', component:YonexSeniorsCup2023Component },
-  { path:'yonex-youth2023', title:'yonex-youth2023', component:YonexYouth2023Component },
+  { path:'', redirectTo:'/landing', pathMatch:'full' },
+  { path:'landing', component:LandingComponent },
+  { path:'mail-me', component:MailMeComponent },
+  { path:'czech-open2022', component:CzechOpen2022Component },
+  { path:'yonex2022', component:Yonex2022Component },
+  { path:'yonex-seniors-cup2023', component:YonexSeniorsCup2023Component },
+  { path:'yonex-youth2023', component:YonexYouth2023Component },
 ];
 
 @NgModule({

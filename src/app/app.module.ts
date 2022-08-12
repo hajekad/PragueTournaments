@@ -12,6 +12,7 @@ import { Yonex2022Component } from './yonex2022/yonex2022.component';
 import { YonexSeniorsCup2023Component } from './yonex-seniors-cup2023/yonex-seniors-cup2023.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { YonexYouth2023Component } from './yonex-youth2023/yonex-youth2023.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { YonexYouth2023Component } from './yonex-youth2023/yonex-youth2023.compo
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule
   ],
   providers: [],
