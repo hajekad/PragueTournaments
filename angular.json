@@ -36,7 +36,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "900kb",
                   "maximumError": "1mb"
                 },
                 {
@@ -101,6 +101,14 @@
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/prague-tournaments",
+            "netlifyToken": "PeI9XQ8JJYF1WQ1xdo9EHlMn1UaV_j3oVTb7ag-G6vk",
+            "siteId": "f3456324-2bfd-4fc8-af60-77149c78fd86"
           }
         }
       }
