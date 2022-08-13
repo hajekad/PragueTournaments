@@ -13,6 +13,7 @@ import { YonexSeniorsCup2023Component } from './yonex-seniors-cup2023/yonex-seni
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { YonexYouth2023Component } from './yonex-youth2023/yonex-youth2023.component';
 import { RouterModule } from '@angular/router';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
