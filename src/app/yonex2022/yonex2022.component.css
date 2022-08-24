@@ -20,18 +20,32 @@
     padding-bottom: 1rem;
 }
 
-#topPic {
+#banner {
     width: inherit;
+    height: auto;
     
     background-color: rgba(99, 102, 106, 0.6);
 }
 
-#topPhoto {
+.card {
     width: inherit;
-
+    display: flex;
     align-items: center;
-    
+    justify-content: center;
     background-color: rgba(99, 102, 106, 0.6);
+}
+
+.img-fluid {
+    height: auto;
+    width: 100vw;
+}
+
+#video {
+    width: 100vw;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    background-color: palegoldenrod;
 }
 
 
