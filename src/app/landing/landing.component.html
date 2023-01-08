@@ -1,24 +1,52 @@
 <section id="content-wrapper">   
-    <div id="mainBody">
-        <a routerLink="/czech-open2022">
-            <div class="card mb-0" id="topPic">
-                <img class="img-fluid" src="../../assets/banners/smallCzechOpen2022.png" id="banner" alt="CzechOpen2022">
-            </div>
-        </a>        
-
+    <div id="mainBody">  
         <div id="smallBody" class="container">
-            <div class="row">
-                <h1 class="text-white">
-                    Sponsors &amp; Patrons
-                </h1>
-
-                <app-sponsors></app-sponsors>
-                
+            <div class="row">                
                 <div id="tournaments">                    
                     <h1 class="text-white">
                         Tournaments
                     </h1>
                     
+                    <hr>
+
+                    <h2 class="text-danger">
+                        2023:
+                    </h2>
+
+                    <div class="container text-center">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <a routerLink="/czech-open2023">
+                                <img class="d-block w-100" src="../../assets/banners/CzechOpen2023.png" alt="CzechOpen2023">
+                            </a>
+                          </div>
+                          <div class="col-md-4">
+                                <div class="row">
+                                    <a routerLink="/yonex-seniors-cup2023">
+                                        <img class="d-block w-100" src="../../assets/banners/Seniors2023.png" alt="Seniors2023">
+                                    </a>
+                                </div>
+                                
+                                <br>
+
+                                <div class="row">
+                                    <a routerLink="/yonex-youth2023">
+                                        <img class="d-block w-100" src="../../assets/banners/Youth2023.png" alt="Youth2023">
+                                    </a>
+                                </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+                    <hr>
+
+                    <h1 class="text-white">
+                        Sponsors &amp; Patrons
+                    </h1>
+    
+                    <app-sponsors></app-sponsors>
+
                     <hr>
 
                     <h2 class="text-danger">
@@ -46,49 +74,15 @@
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#twentyTwoCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+                            <button class="btn btn-circle btn-danger">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
                         </button>
+
                         <button class="carousel-control-next" type="button" data-bs-target="#twentyTwoCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-
-                    <hr>
-
-                    <h2 class="text-danger">
-                        2023:
-                    </h2>
-
-                    <div id="twentythreeCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#twentythreeCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-                            <button type="button" data-bs-target="#twentythreeCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <a routerLink="/yonex-seniors-cup2023">
-                                    <div class="card mb-0">
-                                        <img class="d-block w-100" src="../../assets/banners/YonexSeniorsCup2023.png" alt="First slide">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="carousel-item">
-                                <a routerLink="/yonex-youth2023">
-                                    <div class="card mb-0">
-                                        <img class="d-block w-100" src="../../assets/banners/YonexYouth2023.png" alt="Second slide">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#twentythreeCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#twentythreeCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                            <button class="btn btn-circle btn-danger">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
                         </button>
                     </div>
                 </div>

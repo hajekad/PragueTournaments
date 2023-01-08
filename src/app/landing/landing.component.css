@@ -6,10 +6,6 @@
     background-color: rgba(99, 102, 106, 0.6);
 }
 
-#banner {
-    width: 100vw;
-}
-
 #mainBody {
     margin-top: 3rem;
     background-image: url("../../assets/banners/Uvodkapozadi.png");

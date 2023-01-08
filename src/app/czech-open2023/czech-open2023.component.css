@@ -30,12 +30,6 @@
     width: inherit;
 }
 
-.propositions {
-    margin-bottom: 1rem;    
-    width: 100vw;
-    text-align: center;
-}
-
 .linkButtons {
     display: flex;
     justify-content: center;

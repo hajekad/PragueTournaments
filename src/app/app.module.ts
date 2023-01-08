@@ -14,6 +14,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { YonexYouth2023Component } from './yonex-youth2023/yonex-youth2023.component';
 import { RouterModule } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CzechOpen2023Component } from './czech-open2023/czech-open2023.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     YonexSeniorsCup2023Component,
     SponsorsComponent,
     YonexYouth2023Component,
+    CzechOpen2023Component,
   ],
   imports: [
     BrowserModule,
