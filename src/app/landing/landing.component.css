@@ -27,3 +27,10 @@
 #tournaments {
     margin-top: 1rem;
 }
+
+.twenty-two {
+    display: flex;
+    width: inherit;
+    align-items: center;
+    justify-content: center;
+}
